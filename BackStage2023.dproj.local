@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/03/17 13:11:11.000.955,=C:\Users\vange\OneDrive\Documents\Embarcadero\Studio\Projects\Unit9.pas</Transaction>
+    <Transaction>2023/04/01 09:32:05.000.414,=C:\Users\vange\OneDrive\Documents\Embarcadero\Studio\Projects\Unit9.pas</Transaction>
+    <Transaction>2023/04/01 09:37:47.000.410,=C:\Users\vange\OneDrive\Documents\Embarcadero\Studio\Projects\Unit9.pas</Transaction>
+    <Transaction>2023/04/17 11:54:01.000.189,=C:\Users\vange\OneDrive\Documents\Embarcadero\Studio\Projects\Unit9.pas</Transaction>
+    <Transaction>2023/04/18 07:47:36.000.432,=C:\Users\vange\OneDrive\Documents\Embarcadero\Studio\Projects\Unit9.pas</Transaction>
+    <Transaction>2023/04/26 08:46:20.000.602,=C:\Users\vange\OneDrive\Documents\Embarcadero\Studio\Projects\Unit9.pas</Transaction>
+    <Transaction>2023/04/26 08:47:23.000.186,C:\Users\vange\OneDrive\Documents\Embarcadero\Studio\Projects\Unit9.dfm=C:\Development\Delphi\BackStage2023\frmMain.dfm</Transaction>
+    <Transaction>2023/04/26 08:47:23.000.186,C:\Users\vange\OneDrive\Documents\Embarcadero\Studio\Projects\Unit9.pas=C:\Development\Delphi\BackStage2023\frmMain.pas</Transaction>
+    <Transaction>2023/04/26 08:47:30.000.517,C:\Users\vange\OneDrive\Documents\Embarcadero\Studio\Projects\Project9.dproj=C:\Development\Delphi\BackStage2023\BackStage2023.dproj</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile iOSSimulator="iPhone5" Android64="RF8N735GLKP"/>
+	</ActiveMobileDevice>
+</BorlandProject>
