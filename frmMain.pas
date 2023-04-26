@@ -52,6 +52,8 @@ type
 		Action_Save_Backupset: TAction;
 		Action_Add_Folder: TAction;
 		Action_Remove_Folder: TAction;
+    OpenDialog1: TOpenDialog;
+    SaveDialog1: TSaveDialog;
 		procedure FolderBoxChange(Sender: TObject);
 		procedure Action_ExitExecute(Sender: TObject);
 		procedure FormCreate(Sender: TObject);

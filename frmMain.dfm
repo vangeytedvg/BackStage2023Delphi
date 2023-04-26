@@ -103,6 +103,8 @@ object MainForm: TMainForm
     Caption = 'tbMain'
     Images = ImageList1
     TabOrder = 1
+    ExplicitLeft = -8
+    ExplicitTop = -6
     object ToolButton5: TToolButton
       Left = 0
       Top = 0
@@ -3937,5 +3939,17 @@ object MainForm: TMainForm
       FFFFFFFFFFFFFFFE00007FFF80003FFFFFFFFFFF8001FFFFFFFFFFFFFFFFFFFF
       0000FFFFC000FFFFFFFFFFFFFC3FFFFF00000000000000000000000000000000
       000000000000}
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = '.bckstage'
+    Filter = 'Backstage files (*.bckstage)|*.bckstage'
+    Left = 736
+    Top = 40
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = '.bckstage'
+    Filter = 'Backstage files (*.bckstage)|*.bckstage'
+    Left = 672
+    Top = 40
   end
 end
