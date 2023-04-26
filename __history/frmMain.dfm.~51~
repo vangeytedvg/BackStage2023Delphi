@@ -12,19 +12,18 @@ object MainForm: TMainForm
   Font.Style = []
   Menu = MainMenu
   OldCreateOrder = False
+  OnClose = FormClose
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 17
-  object Splitter2: TSplitter
+  object SplitterMain: TSplitter
     Left = 273
     Top = 64
     Height = 496
     Color = clGray
     ParentColor = False
     StyleElements = []
-    ExplicitLeft = 320
-    ExplicitTop = 312
-    ExplicitHeight = 100
+    ExplicitLeft = 280
   end
   object Panel1: TPanel
     Left = 0
@@ -37,11 +36,11 @@ object MainForm: TMainForm
     Margins.Bottom = 5
     Align = alLeft
     TabOrder = 0
-    ExplicitTop = 0
-    ExplicitHeight = 585
-    object Splitter1: TSplitter
+    ExplicitLeft = -5
+    ExplicitTop = 56
+    object SplitterNavigate: TSplitter
       Left = 1
-      Top = 385
+      Top = 306
       Width = 271
       Height = 3
       Cursor = crVSplit
@@ -49,8 +48,8 @@ object MainForm: TMainForm
       Color = clGray
       ParentColor = False
       StyleElements = []
-      ExplicitTop = 24
-      ExplicitWidth = 341
+      ExplicitLeft = -4
+      ExplicitTop = 305
     end
     object DriveBox: TDriveComboBox
       Left = 1
@@ -69,7 +68,7 @@ object MainForm: TMainForm
       Left = 4
       Top = 27
       Width = 265
-      Height = 355
+      Height = 276
       Align = alClient
       DirLabel = lblCurrentFolder
       FileList = FilesBox
@@ -77,20 +76,19 @@ object MainForm: TMainForm
       ParentColor = True
       TabOrder = 1
       OnChange = FolderBoxChange
-      ExplicitLeft = 5
-      ExplicitTop = 30
+      OnClick = FolderBoxClick
+      ExplicitHeight = 278
     end
     object FilesBox: TFileListBox
       AlignWithMargins = True
       Left = 4
-      Top = 391
+      Top = 312
       Width = 265
-      Height = 101
+      Height = 180
       Align = alBottom
       ItemHeight = 17
       TabOrder = 2
-      ExplicitLeft = 9
-      ExplicitTop = 290
+      ExplicitTop = 296
     end
   end
   object tbMain: TToolBar
@@ -103,6 +101,8 @@ object MainForm: TMainForm
     Caption = 'tbMain'
     Images = ImageList1
     TabOrder = 1
+    ExplicitLeft = -8
+    ExplicitTop = -6
     object ToolButton5: TToolButton
       Left = 0
       Top = 0
@@ -126,7 +126,7 @@ object MainForm: TMainForm
     object ToolButton10: TToolButton
       Left = 136
       Top = 0
-      Caption = 'ToolButton10'
+      Action = Action_Save_Backupset
       ImageIndex = 7
     end
   end
@@ -151,9 +151,7 @@ object MainForm: TMainForm
     ActivePage = TabSheet1
     Align = alClient
     TabOrder = 3
-    ExplicitLeft = 369
-    ExplicitTop = 70
-    ExplicitWidth = 609
+    ExplicitLeft = 300
     object TabSheet1: TTabSheet
       Caption = 'Compression'
       object Label2: TLabel
@@ -261,10 +259,9 @@ object MainForm: TMainForm
         HeaderRowHeight = 21
         SortAttributes = []
         TabOrder = 0
-        ExplicitLeft = 72
-        ExplicitTop = 168
-        ExplicitWidth = 320
-        ExplicitHeight = 120
+        ExplicitLeft = 2
+        ExplicitTop = 47
+        ExplicitWidth = 392
         RowHeights = (
           21
           19)
@@ -319,26 +316,32 @@ object MainForm: TMainForm
     object Action_New_ZipFile: TAction
       Category = 'MainActions'
       Caption = 'New Zipfile'
+      OnExecute = Action_New_ZipFileExecute
     end
     object Action_Create_ZipFile: TAction
       Category = 'MainActions'
       Caption = 'Create Zipfile'
+      OnExecute = Action_Create_ZipFileExecute
     end
     object Action_Save_ZipFile: TAction
       Category = 'MainActions'
       Caption = 'Save ZipFile'
+      OnExecute = Action_Save_ZipFileExecute
     end
     object Action_Save_Backupset: TAction
       Category = 'MainActions'
       Caption = 'Save BackupSet'
+      OnExecute = Action_Save_BackupsetExecute
     end
     object Action_Add_Folder: TAction
       Category = 'FolderAction'
       Caption = 'Add Folder'
+      OnExecute = Action_Add_FolderExecute
     end
     object Action_Remove_Folder: TAction
       Category = 'FolderAction'
       Caption = 'Action_Remove_Folder'
+      OnExecute = Action_Remove_FolderExecute
     end
   end
   object MainMenu: TMainMenu
@@ -3931,5 +3934,17 @@ object MainForm: TMainForm
       FFFFFFFFFFFFFFFE00007FFF80003FFFFFFFFFFF8001FFFFFFFFFFFFFFFFFFFF
       0000FFFFC000FFFFFFFFFFFFFC3FFFFF00000000000000000000000000000000
       000000000000}
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = '.bckstage'
+    Filter = 'Backstage files (*.bckstage)|*.bckstage'
+    Left = 736
+    Top = 40
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = '.bckstage'
+    Filter = 'Backstage files (*.bckstage)|*.bckstage'
+    Left = 672
+    Top = 40
   end
 end

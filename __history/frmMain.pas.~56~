@@ -65,7 +65,6 @@ type
     procedure Action_Save_ZipFileExecute(Sender: TObject);
     procedure Action_Save_BackupsetExecute(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
-    procedure BackupSetListClick(Sender: TObject);
   private
     { Private declarations }
     FCurrentFolder: string;
@@ -88,7 +87,7 @@ var
 begin
   SelectedFolder := LblCurrentFolder.Caption;
   // Verify that the folder is not already selected
-  ItemIndex := BackupSetList.Items.IndexOf(SelectedFolder);
+  ItemIndex := BackupSetList.Items.IndexOfName(SelectedFolder);
   if Itemindex = -1 then
   begin
     // Folder can be added
@@ -115,11 +114,7 @@ end;
 
 procedure TMainForm.Action_Remove_FolderExecute(Sender: TObject);
 begin
-  BackupSetList.DeleteSelected;
-  // Check if we still have items left
-  if BackupSetList.Count = 0 then
-    Action_Remove_Folder.Enabled := False;
-
+  ShowMessage('Remove Folder');
 end;
 
 procedure TMainForm.Action_Save_BackupsetExecute(Sender: TObject);
@@ -130,11 +125,6 @@ end;
 procedure TMainForm.Action_Save_ZipFileExecute(Sender: TObject);
 begin
   ShowMessage('Save zip file');
-end;
-
-procedure TMainForm.BackupSetListClick(Sender: TObject);
-begin
-  Action_Remove_Folder.Enabled := True;
 end;
 
 procedure TMainForm.FolderBoxChange(Sender: TObject);

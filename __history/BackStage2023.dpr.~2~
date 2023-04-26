@@ -11,7 +11,7 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
-  TStyleManager.TrySetStyle('Aqua Graphite');
+  TStyleManager.TrySetStyle('Glossy');
   Application.CreateForm(TMainForm, MainForm);
   Application.Run;
 end.

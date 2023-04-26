@@ -23,7 +23,9 @@ object MainForm: TMainForm
     Color = clGray
     ParentColor = False
     StyleElements = []
-    ExplicitLeft = 280
+    ExplicitLeft = 320
+    ExplicitTop = 312
+    ExplicitHeight = 100
   end
   object Panel1: TPanel
     Left = 0
@@ -36,9 +38,11 @@ object MainForm: TMainForm
     Margins.Bottom = 5
     Align = alLeft
     TabOrder = 0
+    ExplicitTop = 0
+    ExplicitHeight = 585
     object SplitterNavigate: TSplitter
       Left = 1
-      Top = 306
+      Top = 385
       Width = 271
       Height = 3
       Cursor = crVSplit
@@ -46,8 +50,8 @@ object MainForm: TMainForm
       Color = clGray
       ParentColor = False
       StyleElements = []
-      ExplicitLeft = -4
-      ExplicitTop = 305
+      ExplicitTop = 24
+      ExplicitWidth = 341
     end
     object DriveBox: TDriveComboBox
       Left = 1
@@ -57,13 +61,16 @@ object MainForm: TMainForm
       Align = alTop
       DirList = FolderBox
       TabOrder = 0
+      ExplicitLeft = 16
+      ExplicitTop = 12
+      ExplicitWidth = 217
     end
     object FolderBox: TDirectoryListBox
       AlignWithMargins = True
       Left = 4
       Top = 27
       Width = 265
-      Height = 276
+      Height = 355
       Align = alClient
       DirLabel = lblCurrentFolder
       FileList = FilesBox
@@ -71,16 +78,20 @@ object MainForm: TMainForm
       ParentColor = True
       TabOrder = 1
       OnChange = FolderBoxChange
+      ExplicitLeft = 5
+      ExplicitTop = 30
     end
     object FilesBox: TFileListBox
       AlignWithMargins = True
       Left = 4
-      Top = 312
+      Top = 391
       Width = 265
-      Height = 180
+      Height = 101
       Align = alBottom
       ItemHeight = 17
       TabOrder = 2
+      ExplicitLeft = 9
+      ExplicitTop = 290
     end
   end
   object tbMain: TToolBar
@@ -93,6 +104,8 @@ object MainForm: TMainForm
     Caption = 'tbMain'
     Images = ImageList1
     TabOrder = 1
+    ExplicitLeft = -8
+    ExplicitTop = -6
     object ToolButton5: TToolButton
       Left = 0
       Top = 0
@@ -141,6 +154,9 @@ object MainForm: TMainForm
     ActivePage = TabSheet1
     Align = alClient
     TabOrder = 3
+    ExplicitLeft = 369
+    ExplicitTop = 70
+    ExplicitWidth = 609
     object TabSheet1: TTabSheet
       Caption = 'Compression'
       object Label2: TLabel
@@ -151,6 +167,7 @@ object MainForm: TMainForm
         Height = 17
         Align = alTop
         Caption = 'Current Folder:'
+        ExplicitLeft = 8
         ExplicitWidth = 87
       end
       object lblCurrentFolder: TLabel
@@ -168,9 +185,11 @@ object MainForm: TMainForm
         Font.Style = []
         ParentFont = False
         StyleElements = [seClient, seBorder]
+        ExplicitLeft = 101
+        ExplicitTop = 3
         ExplicitWidth = 203
       end
-      object BackupSetList: TListBox
+      object ListBox1: TListBox
         AlignWithMargins = True
         Left = 3
         Top = 107
@@ -179,7 +198,10 @@ object MainForm: TMainForm
         Align = alClient
         ItemHeight = 17
         TabOrder = 0
-        OnClick = BackupSetListClick
+        ExplicitLeft = 4
+        ExplicitTop = 104
+        ExplicitWidth = 421
+        ExplicitHeight = 277
       end
       object ToolBar2: TToolBar
         AlignWithMargins = True
@@ -242,6 +264,10 @@ object MainForm: TMainForm
         HeaderRowHeight = 21
         SortAttributes = []
         TabOrder = 0
+        ExplicitLeft = 72
+        ExplicitTop = 168
+        ExplicitWidth = 320
+        ExplicitHeight = 120
         RowHeights = (
           21
           19)
@@ -255,6 +281,7 @@ object MainForm: TMainForm
         ButtonWidth = 48
         Caption = 'tbDecompress'
         TabOrder = 1
+        ExplicitWidth = 601
         object ToolButton4: TToolButton
           Left = 0
           Top = 0

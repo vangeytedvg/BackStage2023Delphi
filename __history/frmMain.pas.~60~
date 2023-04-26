@@ -115,10 +115,10 @@ end;
 
 procedure TMainForm.Action_Remove_FolderExecute(Sender: TObject);
 begin
-  BackupSetList.DeleteSelected;
-  // Check if we still have items left
-  if BackupSetList.Count = 0 then
-    Action_Remove_Folder.Enabled := False;
+  if BackupSetList.Selected(BackupSetList.items[BackupSetList.ItemIndex]) then
+  begin
+    BackupSetList.items.Delete(BackupSetList.ItemIndex);
+  end;
 
 end;
 
@@ -134,7 +134,7 @@ end;
 
 procedure TMainForm.BackupSetListClick(Sender: TObject);
 begin
-  Action_Remove_Folder.Enabled := True;
+  Action_Remove_Folder.Enabled := true;
 end;
 
 procedure TMainForm.FolderBoxChange(Sender: TObject);

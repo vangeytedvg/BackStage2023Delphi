@@ -179,7 +179,7 @@ object MainForm: TMainForm
         Align = alClient
         ItemHeight = 17
         TabOrder = 0
-        OnClick = BackupSetListClick
+        OnEnter = BackupSetListEnter
       end
       object ToolBar2: TToolBar
         AlignWithMargins = True

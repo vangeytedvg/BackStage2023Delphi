@@ -12,10 +12,11 @@ object MainForm: TMainForm
   Font.Style = []
   Menu = MainMenu
   OldCreateOrder = False
+  OnClose = FormClose
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 17
-  object Splitter2: TSplitter
+  object SplitterMain: TSplitter
     Left = 273
     Top = 64
     Height = 496
@@ -39,7 +40,7 @@ object MainForm: TMainForm
     TabOrder = 0
     ExplicitTop = 0
     ExplicitHeight = 585
-    object Splitter1: TSplitter
+    object SplitterNavigate: TSplitter
       Left = 1
       Top = 385
       Width = 271
@@ -49,8 +50,8 @@ object MainForm: TMainForm
       Color = clGray
       ParentColor = False
       StyleElements = []
-      ExplicitTop = 24
-      ExplicitWidth = 341
+      ExplicitLeft = -4
+      ExplicitTop = 305
     end
     object DriveBox: TDriveComboBox
       Left = 1
@@ -77,8 +78,7 @@ object MainForm: TMainForm
       ParentColor = True
       TabOrder = 1
       OnChange = FolderBoxChange
-      ExplicitLeft = 5
-      ExplicitTop = 30
+      ExplicitHeight = 278
     end
     object FilesBox: TFileListBox
       AlignWithMargins = True
@@ -103,6 +103,8 @@ object MainForm: TMainForm
     Caption = 'tbMain'
     Images = ImageList1
     TabOrder = 1
+    ExplicitLeft = -8
+    ExplicitTop = -6
     object ToolButton5: TToolButton
       Left = 0
       Top = 0
@@ -319,18 +321,22 @@ object MainForm: TMainForm
     object Action_New_ZipFile: TAction
       Category = 'MainActions'
       Caption = 'New Zipfile'
+      OnExecute = Action_New_ZipFileExecute
     end
     object Action_Create_ZipFile: TAction
       Category = 'MainActions'
       Caption = 'Create Zipfile'
+      OnExecute = Action_Create_ZipFileExecute
     end
     object Action_Save_ZipFile: TAction
       Category = 'MainActions'
       Caption = 'Save ZipFile'
+      OnExecute = Action_Save_ZipFileExecute
     end
     object Action_Save_Backupset: TAction
       Category = 'MainActions'
       Caption = 'Save BackupSet'
+      OnExecute = Action_Save_BackupsetExecute
     end
     object Action_Add_Folder: TAction
       Category = 'FolderAction'
@@ -340,6 +346,7 @@ object MainForm: TMainForm
     object Action_Remove_Folder: TAction
       Category = 'FolderAction'
       Caption = 'Action_Remove_Folder'
+      OnExecute = Action_Remove_FolderExecute
     end
   end
   object MainMenu: TMainMenu
@@ -3932,5 +3939,17 @@ object MainForm: TMainForm
       FFFFFFFFFFFFFFFE00007FFF80003FFFFFFFFFFF8001FFFFFFFFFFFFFFFFFFFF
       0000FFFFC000FFFFFFFFFFFFFC3FFFFF00000000000000000000000000000000
       000000000000}
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = '.bckstage'
+    Filter = 'Backstage files (*.bckstage)|*.bckstage'
+    Left = 736
+    Top = 40
+  end
+  object SaveDialog1: TSaveDialog
+    DefaultExt = '.bckstage'
+    Filter = 'Backstage files (*.bckstage)|*.bckstage'
+    Left = 672
+    Top = 40
   end
 end
