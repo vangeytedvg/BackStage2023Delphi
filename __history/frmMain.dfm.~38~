@@ -106,13 +106,13 @@ object MainForm: TMainForm
     object ToolButton5: TToolButton
       Left = 0
       Top = 0
-      Action = Action_New_ZipFile
+      Caption = 'ToolButton5'
       ImageIndex = 0
     end
     object ToolButton6: TToolButton
       Left = 64
       Top = 0
-      Action = Action_Create_ZipFile
+      Caption = 'ToolButton6'
       ImageIndex = 6
     end
     object ToolButton7: TToolButton
@@ -126,7 +126,7 @@ object MainForm: TMainForm
     object ToolButton10: TToolButton
       Left = 136
       Top = 0
-      Action = Action_Save_Backupset
+      Caption = 'ToolButton10'
       ImageIndex = 7
     end
   end
@@ -189,9 +189,9 @@ object MainForm: TMainForm
       object ListBox1: TListBox
         AlignWithMargins = True
         Left = 3
-        Top = 107
+        Top = 103
         Width = 592
-        Height = 354
+        Height = 358
         Align = alClient
         ItemHeight = 17
         TabOrder = 0
@@ -205,22 +205,23 @@ object MainForm: TMainForm
         Left = 3
         Top = 49
         Width = 592
-        Height = 52
+        Height = 48
         ButtonHeight = 54
         ButtonWidth = 55
         Caption = 'ToolBar2'
         Images = ImageList1
         TabOrder = 1
+        ExplicitWidth = 595
         object ToolButton1: TToolButton
           Left = 0
           Top = 0
-          Action = Action_Add_Folder
+          Caption = 'ToolButton1'
           ImageIndex = 4
         end
         object ToolButton2: TToolButton
           Left = 55
           Top = 0
-          Action = Action_Remove_Folder
+          Caption = 'ToolButton2'
           ImageIndex = 1
         end
       end
@@ -308,43 +309,12 @@ object MainForm: TMainForm
     Left = 800
     Top = 40
   end
-  object ActionList: TActionList
+  object ActionList1: TActionList
     Left = 357
     Top = 492
     object Action_Exit: TAction
-      Category = 'MainActions'
       Caption = 'E&xit'
       OnExecute = Action_ExitExecute
-    end
-    object Action_New_ZipFile: TAction
-      Category = 'MainActions'
-      Caption = 'New Zipfile'
-      OnExecute = Action_New_ZipFileExecute
-    end
-    object Action_Create_ZipFile: TAction
-      Category = 'MainActions'
-      Caption = 'Create Zipfile'
-      OnExecute = Action_Create_ZipFileExecute
-    end
-    object Action_Save_ZipFile: TAction
-      Category = 'MainActions'
-      Caption = 'Save ZipFile'
-      OnExecute = Action_Save_ZipFileExecute
-    end
-    object Action_Save_Backupset: TAction
-      Category = 'MainActions'
-      Caption = 'Save BackupSet'
-      OnExecute = Action_Save_BackupsetExecute
-    end
-    object Action_Add_Folder: TAction
-      Category = 'FolderAction'
-      Caption = 'Add Folder'
-      OnExecute = Action_Add_FolderExecute
-    end
-    object Action_Remove_Folder: TAction
-      Category = 'FolderAction'
-      Caption = 'Action_Remove_Folder'
-      OnExecute = Action_Remove_FolderExecute
     end
   end
   object MainMenu: TMainMenu

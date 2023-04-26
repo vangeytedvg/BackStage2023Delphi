@@ -319,32 +319,26 @@ object MainForm: TMainForm
     object Action_New_ZipFile: TAction
       Category = 'MainActions'
       Caption = 'New Zipfile'
-      OnExecute = Action_New_ZipFileExecute
     end
     object Action_Create_ZipFile: TAction
       Category = 'MainActions'
       Caption = 'Create Zipfile'
-      OnExecute = Action_Create_ZipFileExecute
     end
     object Action_Save_ZipFile: TAction
       Category = 'MainActions'
       Caption = 'Save ZipFile'
-      OnExecute = Action_Save_ZipFileExecute
     end
     object Action_Save_Backupset: TAction
       Category = 'MainActions'
       Caption = 'Save BackupSet'
-      OnExecute = Action_Save_BackupsetExecute
     end
     object Action_Add_Folder: TAction
       Category = 'FolderAction'
       Caption = 'Add Folder'
-      OnExecute = Action_Add_FolderExecute
     end
     object Action_Remove_Folder: TAction
       Category = 'FolderAction'
       Caption = 'Action_Remove_Folder'
-      OnExecute = Action_Remove_FolderExecute
     end
   end
   object MainMenu: TMainMenu
