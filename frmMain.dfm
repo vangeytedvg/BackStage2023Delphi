@@ -15,6 +15,17 @@ object MainForm: TMainForm
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 17
+  object Splitter2: TSplitter
+    Left = 273
+    Top = 64
+    Height = 496
+    Color = clGray
+    ParentColor = False
+    StyleElements = []
+    ExplicitLeft = 320
+    ExplicitTop = 312
+    ExplicitHeight = 100
+  end
   object Panel1: TPanel
     Left = 0
     Top = 64
@@ -28,17 +39,18 @@ object MainForm: TMainForm
     TabOrder = 0
     ExplicitTop = 0
     ExplicitHeight = 585
-    object Label1: TLabel
-      AlignWithMargins = True
-      Left = 4
-      Top = 351
-      Width = 265
-      Height = 17
-      Align = alTop
-      Caption = 'Files in folder'
-      ExplicitLeft = 8
-      ExplicitTop = 296
-      ExplicitWidth = 78
+    object Splitter1: TSplitter
+      Left = 1
+      Top = 385
+      Width = 271
+      Height = 3
+      Cursor = crVSplit
+      Align = alBottom
+      Color = clGray
+      ParentColor = False
+      StyleElements = []
+      ExplicitTop = 24
+      ExplicitWidth = 341
     end
     object DriveBox: TDriveComboBox
       Left = 1
@@ -57,8 +69,8 @@ object MainForm: TMainForm
       Left = 4
       Top = 27
       Width = 265
-      Height = 318
-      Align = alTop
+      Height = 355
+      Align = alClient
       DirLabel = lblCurrentFolder
       FileList = FilesBox
       ItemHeight = 17
@@ -67,20 +79,19 @@ object MainForm: TMainForm
       OnChange = FolderBoxChange
       ExplicitLeft = 6
       ExplicitTop = 30
+      ExplicitHeight = 335
     end
     object FilesBox: TFileListBox
       AlignWithMargins = True
       Left = 4
-      Top = 374
+      Top = 391
       Width = 265
-      Height = 118
-      Align = alClient
+      Height = 101
+      Align = alBottom
       ItemHeight = 17
       TabOrder = 2
-      ExplicitLeft = -106
-      ExplicitTop = 329
-      ExplicitWidth = 378
-      ExplicitHeight = 241
+      ExplicitLeft = 9
+      ExplicitTop = 290
     end
   end
   object tbMain: TToolBar
@@ -125,20 +136,23 @@ object MainForm: TMainForm
       end>
   end
   object Pages: TPageControl
-    Left = 273
+    Left = 276
     Top = 64
-    Width = 609
+    Width = 606
     Height = 496
-    ActivePage = TabSheet1
+    ActivePage = TabSheet2
     Align = alClient
     TabOrder = 3
+    ExplicitLeft = 369
+    ExplicitTop = 70
+    ExplicitWidth = 609
     object TabSheet1: TTabSheet
       Caption = 'Compression'
       object Label2: TLabel
         AlignWithMargins = True
         Left = 3
         Top = 3
-        Width = 595
+        Width = 592
         Height = 17
         Align = alTop
         Caption = 'Current Folder:'
@@ -149,7 +163,7 @@ object MainForm: TMainForm
         AlignWithMargins = True
         Left = 3
         Top = 26
-        Width = 595
+        Width = 592
         Height = 17
         Align = alTop
         Caption = 'C:\...\Embarcadero\Studio\21.0\bin'
@@ -168,7 +182,7 @@ object MainForm: TMainForm
         AlignWithMargins = True
         Left = 3
         Top = 103
-        Width = 595
+        Width = 592
         Height = 358
         Align = alClient
         ItemHeight = 17
@@ -182,12 +196,13 @@ object MainForm: TMainForm
         AlignWithMargins = True
         Left = 3
         Top = 49
-        Width = 595
+        Width = 592
         Height = 48
         ButtonHeight = 48
         ButtonWidth = 48
         Caption = 'ToolBar2'
         TabOrder = 1
+        ExplicitWidth = 595
         object ToolButton1: TToolButton
           Left = 0
           Top = 0
@@ -214,7 +229,7 @@ object MainForm: TMainForm
       object AbZipView1: TAbZipView
         Left = 0
         Top = 49
-        Width = 601
+        Width = 598
         Height = 415
         Align = alClient
         Attributes = [vaItemName, vaPacked, vaTimeStamp, vaFileSize, vaPath]
@@ -255,12 +270,13 @@ object MainForm: TMainForm
       object tbDecompress: TToolBar
         Left = 0
         Top = 0
-        Width = 601
+        Width = 598
         Height = 49
         ButtonHeight = 48
         ButtonWidth = 48
         Caption = 'tbDecompress'
         TabOrder = 1
+        ExplicitWidth = 601
         object ToolButton4: TToolButton
           Left = 0
           Top = 0

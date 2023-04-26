@@ -15,7 +15,6 @@ type
     DriveBox: TDriveComboBox;
     FolderBox: TDirectoryListBox;
     FilesBox: TFileListBox;
-    Label1: TLabel;
     tbMain: TToolBar;
     StatusB: TStatusBar;
     Pages: TPageControl;
@@ -40,6 +39,8 @@ type
     ToolButton5: TToolButton;
     ToolButton6: TToolButton;
     ToolButton7: TToolButton;
+    Splitter1: TSplitter;
+    Splitter2: TSplitter;
     procedure FolderBoxChange(Sender: TObject);
     procedure Action_ExitExecute(Sender: TObject);
     procedure FormCreate(Sender: TObject);
